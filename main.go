@@ -250,8 +250,8 @@ func main() {
 	for _, pq := range workers {
 		// each is a different worker
 
-		///go worker(feed, crypto, tasks, pq.Username, pq.Password, pq.ProxyURL, f)
-		go workerProxyTest(feed, crypto, tasks, pq.Username, pq.Password, f)
+		go worker(feed, crypto, tasks, pq.Username, pq.Password, pq.ProxyURL, f)
+		//go workerProxyTest(feed, crypto, tasks, pq.Username, pq.Password, f)
 	}
 
 	// Initial scanning phase - one hour, 10 secs, 7.5 min wait
